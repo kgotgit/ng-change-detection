@@ -1,4 +1,6 @@
-<mat-card matRipple class="box one">
-  <mat-card-title>Box Two</mat-card-title>
+<mat-card  class="box one">
+<mat-card-title>
+  <button mat-raised-button color="primary" (click)="boxService.increment()">Box One</button> {{boxService.counter}}
+</mat-card-title>
   <app-box-two></app-box-two>
 </mat-card>

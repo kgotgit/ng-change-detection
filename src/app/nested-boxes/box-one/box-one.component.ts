@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { BoxService } from 'src/app/services/box.service';
 
 @Component({
   selector: 'app-box-one',
@@ -8,7 +9,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class BoxOneComponent implements OnInit {
 
-  constructor() { }
+  constructor(public boxService:BoxService) { }
 
   ngOnInit(): void {
   }
