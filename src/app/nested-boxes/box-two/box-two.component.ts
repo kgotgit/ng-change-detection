@@ -16,6 +16,7 @@ export class BoxTwoComponent implements OnInit {
   @Input()
   set boxOneCounter(counter){
     this._boxOneCounter=counter;
+    console.log("from Box One to Two =>"+counter);
   }
   constructor(public boxService:BoxService) { }
 
