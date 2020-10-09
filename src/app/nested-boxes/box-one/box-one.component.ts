@@ -9,9 +9,15 @@ import { BoxService } from 'src/app/services/box.service';
 })
 export class BoxOneComponent implements OnInit {
 
+  _boxOneCounter=0;
   constructor(public boxService:BoxService) { }
 
   ngOnInit(): void {
+  }
+
+  increment(){
+    this.boxService.increment();
+    this._boxOneCounter++;
   }
 
 }

@@ -1,6 +1,13 @@
-<mat-card  class="box two">
-  <mat-card-title>
-    <button mat-raised-button color="warn" (click)="boxService.increment()">Box Two</button> {{boxService.counter}}
-  </mat-card-title>
-  <app-box-three></app-box-three>
-</mat-card>
+<div class="mat-card mat-focus-indicator box two">
+  <div class="mat-card-title">
+    <button mat-raised-button color="accent" (click)="boxService.increment()">
+      Box Two
+    </button>
+  </div>
+  <div class="mat-card-content">
+    <div class="mat-card box ">From Box Service: <span class="mat-card font-bold">{{ boxService.counter }} </span></div>
+
+    <div class="mat-card box ">From Box One via @Input(): <span class="mat-card font-bold">{{ _boxOneCounter }}</span></div>
+  </div>
+  <app-box-three [boxOneCounter]="_boxOneCounter"></app-box-three>
+</div>
