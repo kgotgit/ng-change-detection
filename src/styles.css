@@ -39,3 +39,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   font-size:1rem;
 }
 
+
+.move-fromTop-bottom{
+  position: absolute;
+  right:10px;
+  top:10px;
+  font-size:20px;
+}
+
+.move-fromTop-bottom.animate{
+  animation: topToBottom 2s linear;
+}
+
+@keyframes topToBottom{
+  from {top:0px}
+  to {top:200px}
+}
+
+
