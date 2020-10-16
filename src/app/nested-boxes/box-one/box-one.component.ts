@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { BoxService } from 'src/app/services/box.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { BoxService } from 'src/app/services/box.service';
 export class BoxOneComponent implements OnInit {
 
   _boxOneCounter=0;
-  constructor(public boxService:BoxService) { }
+  constructor(public boxService:BoxService,private changeDetection:ChangeDetectorRef) { }
 
   ngOnInit(): void {
   }
@@ -18,6 +18,7 @@ export class BoxOneComponent implements OnInit {
   increment(){
     this.boxService.increment();
     this._boxOneCounter++;
+   /*  this.changeDetection.detectChanges(); */
   }
 
 }
