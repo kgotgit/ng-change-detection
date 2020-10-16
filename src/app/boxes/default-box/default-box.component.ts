@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefaultBoxComponent implements OnInit {
 
+  boxes=[];
   constructor() { }
 
   ngOnInit(): void {
+
+    this.boxes.push("boxes "+this.boxes.length);
   }
 
 }
