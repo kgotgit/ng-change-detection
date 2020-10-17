@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-default-box',
@@ -7,12 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefaultBoxComponent implements OnInit {
 
-  boxes=[];
+
+
+  @Input() boxes:[];
   constructor() { }
 
   ngOnInit(): void {
 
-    this.boxes.push("boxes "+this.boxes.length);
+
   }
+
+
 
 }

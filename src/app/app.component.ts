@@ -8,4 +8,10 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-change-detection';
+
+  boxes=[];
+
+  onAdd(){
+    this.boxes.push("boxes "+this.boxes.length);
+  }
 }

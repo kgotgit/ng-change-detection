@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NestedBoxesModule } from './nested-boxes/nested-boxes.module';
 import { OnPushBoxComponent } from './boxes/on-push-box/on-push-box.component';
 import { DefaultBoxComponent } from './boxes/default-box/default-box.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DefaultBoxComponent } from './boxes/default-box/default-box.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NestedBoxesModule
+    NestedBoxesModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
