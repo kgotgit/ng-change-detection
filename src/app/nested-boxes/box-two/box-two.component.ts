@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, DoCheck } from '@angular/core';
 import { BoxService } from 'src/app/services/box.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { BoxService } from 'src/app/services/box.service';
   styleUrls: ['./box-two.component.css'],
   changeDetection:ChangeDetectionStrategy.OnPush
 })
-export class BoxTwoComponent implements OnInit {
+export class BoxTwoComponent implements OnInit,DoCheck {
 
 
   _boxOneCounter=0;
@@ -20,7 +20,12 @@ export class BoxTwoComponent implements OnInit {
   }
   constructor(public boxService:BoxService) { }
 
+
   ngOnInit(): void {
   }
 
+
+  ngDoCheck(): void {
+    console.log("doCheck");
+  }
 }

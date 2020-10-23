@@ -1,14 +1,14 @@
 <div class="mat-card mat-focus-indicator box one">
- <!--  <div class="move-fromTop-bottom animate">south</div> -->
   <div class="mat-card-title">
     <button mat-raised-button color="primary" (click)="increment()">
       Box One
     </button>
   </div>
   <div class="mat-card-content">
-    <div class="mat-card box ">From Box Service: <span class="mat-card font-bold">{{ boxService.counter }} </span></div>
-
-    <div class="mat-card box ">From Box One via @Input(): <span class="mat-card font-bold">{{ _boxOneCounter }}</span></div>
+    <div class="mat-card box">
+      From Box Service:
+      <span class="mat-card font-bold">{{ boxService.counter }} </span>
+    </div>
   </div>
   <app-box-two [boxOneCounter]="_boxOneCounter"></app-box-two>
 </div>
