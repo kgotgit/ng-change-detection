@@ -17,19 +17,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   width:450px;
   min-height:450px;
   height:auto;
-  padding-bottom:6rem;
+  padding-bottom:4rem;
+  border:1px solid blue;
 }
 
 .box.two{
   width:400px;
-  min-height:250px;
-  padding-bottom:6rem;
+  min-height:150px;
+  padding-bottom:2rem;
+  border:3px dotted red;
 }
 
 .box.three{
   width:350px;
-  min-height:200px;
+  min-height:100px;
   padding-bottom:3rem;
+  border:2px solid yellow;
 }
 
 .font-bold{

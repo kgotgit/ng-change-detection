@@ -7,6 +7,7 @@ import { NestedBoxesModule } from './nested-boxes/nested-boxes.module';
 import { OnPushBoxComponent } from './boxes/on-push-box/on-push-box.component';
 import { DefaultBoxComponent } from './boxes/default-box/default-box.component';
 import { MaterialModule } from './material/material.module';
+import { ProjectedBoxesModule } from './projected-boxes/projected-boxes.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MaterialModule } from './material/material.module';
     BrowserModule,
     BrowserAnimationsModule,
     NestedBoxesModule,
+    ProjectedBoxesModule,
     MaterialModule
   ],
   providers: [],

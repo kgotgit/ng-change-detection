@@ -1,1 +1,15 @@
-<p>projected-box-one works!</p>
+<div class="mat-card mat-focus-indicator box one">
+  <div class="mat-card-title">
+    <button mat-raised-button color="primary" (click)="increment()">
+      Projected Box One
+    </button>
+  </div>
+  <div class="mat-card-content">
+    <div class="mat-card box">
+      From Box Service:
+      <span class="mat-card font-bold">{{ boxService.counter }} </span>
+    </div>
+  </div>
+  <b>Projected Content is below</b>
+  <ng-content></ng-content>
+</div>
