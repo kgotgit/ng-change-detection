@@ -1,4 +1,6 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy, DoCheck, ChangeDetectorRef } from '@angular/core';
+import { ChangeDetectionStrategy,
+         ChangeDetectorRef,
+         Component, DoCheck, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-on-push-box',
@@ -6,11 +8,12 @@ import { Component, OnInit, Input, ChangeDetectionStrategy, DoCheck, ChangeDetec
   styleUrls: ['./on-push-box.component.css'],
   changeDetection:ChangeDetectionStrategy.OnPush
 })
-export class OnPushBoxComponent implements OnInit, DoCheck{
+export class OnPushBoxComponent implements OnInit,DoCheck {
 
   _boxes:[];
-  _count=-1;
+  _size=-1;
 
+  /**Set the boxes data recieved from parent component */
   @Input()
   set boxes(boxes){
     this._boxes=boxes;
@@ -19,27 +22,25 @@ export class OnPushBoxComponent implements OnInit, DoCheck{
   get boxes(){
     return this._boxes;
   }
-
   constructor(private changeDetectorRef:ChangeDetectorRef) { }
 
   ngOnInit(): void {}
 
+  /**Set the size of the boxes array which can be used */
   setCount(){
-    this._count=Array.isArray(this._boxes)?this._boxes.length:0;
+    this._size=Array.isArray(this._boxes)?this._boxes.length:0;
   }
 
+  /**Check if the boxes size changes as compared to the size of local
+   * variable and add view to the change detector queue via markForCheck*/
   ngDoCheck(): void {
-    console.log("ngDoCheck");
-    if(this._boxes && this._boxes.length!=this._count){
-      this.changeDetectorRef.markForCheck();
+    console.log("doCheck");
+    if(this._boxes && this._boxes.length!=this._size){
+      this.changeDetectorRef.detectChanges();
       this.setCount();
-      console.log("markForCheck");
+      console.log("markForCheck called");
     }
   }
-
-  noAction($event){
-    this.changeDetectorRef.markForCheck();
-    console.log("Detect Changes app-on-push-box");
-  }
-
 }
+
+
